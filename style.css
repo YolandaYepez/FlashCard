@@ -1,3 +1,7 @@
+/* =========================
+   CONFIGURAÇÕES GERAIS
+   ========================= */
+
 * {
     margin: 0;
     padding: 0;
@@ -6,94 +10,146 @@
 
 body {
     min-height: 100vh;
+
     display: flex;
     flex-direction: column;
 
-    font-family: Arial, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
 
     background: #f4f1f7;
+    color: #222;
 }
 
 
-/* CABEÇALHO */
+/* =========================
+   CABEÇALHO
+   ========================= */
 
 .cabecalho {
-    background: #831a91;
+    width: 100%;
 
     padding: 18px 40px;
 
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
 
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    background: #831a91;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.18);
 }
 
 .cabecalho h1 {
     color: white;
+
     font-size: 26px;
+    font-weight: bold;
 }
 
 .cabecalho a {
     color: white;
+
     text-decoration: none;
+
     font-size: 16px;
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.cabecalho a:hover {
+    opacity: 0.7;
 }
 
 
-/* CONTEÚDO */
+/* =========================
+   CONTEÚDO
+   ========================= */
 
 main {
     flex: 1;
 
-    padding: 45px 25px;
+    width: 100%;
+
+    padding: 50px 25px;
 }
 
 
-/* TÍTULO */
+/* =========================
+   TÍTULO
+   ========================= */
 
 .titulo {
     text-align: center;
-    margin-bottom: 40px;
+
+    margin-bottom: 45px;
+}
+
+.subtitulo {
+    display: block;
+
+    color: #831a91;
+
+    font-size: 13px;
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 8px;
 }
 
 .titulo h2 {
     color: #831a91;
-    font-size: 30px;
-    margin-bottom: 10px;
+
+    font-size: 32px;
+
+    margin-bottom: 12px;
 }
 
 .titulo p {
     color: #555;
+
     font-size: 17px;
+
+    line-height: 1.5;
 }
 
 
-/* ÁREA DOS CARDS */
+/* =========================
+   ÁREA DOS CARDS
+   ========================= */
 
 .cards {
     max-width: 1100px;
+
     margin: auto;
 
     display: flex;
+
     justify-content: center;
+    align-items: center;
+
     flex-wrap: wrap;
 
     gap: 30px;
 }
 
 
-/* CARD */
+/* =========================
+   CARD
+   ========================= */
 
 .cartao {
     width: 240px;
-    height: 310px;
+    height: 340px;
 
     perspective: 1000px;
 }
 
 
-/* PARTE QUE GIRA */
+/* =========================
+   PARTE QUE GIRA
+   ========================= */
 
 .cartao-interno {
     width: 100%;
@@ -107,14 +163,16 @@ main {
 }
 
 
-/* QUANDO PASSAR O MOUSE */
+/* Quando passa o mouse */
 
 .cartao:hover .cartao-interno {
     transform: rotateY(180deg);
 }
 
 
-/* FRENTE E VERSO */
+/* =========================
+   FRENTE E VERSO
+   ========================= */
 
 .cartao-frente,
 .cartao-verso {
@@ -123,15 +181,17 @@ main {
 
     position: absolute;
 
-    padding: 25px;
+    padding: 22px;
 
     border-radius: 18px;
 
     background: white;
 
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.12);
 
     display: flex;
+
     flex-direction: column;
 
     justify-content: center;
@@ -143,48 +203,79 @@ main {
 }
 
 
-/* NÚMERO */
+/* =========================
+   NÚMERO DO CARD
+   ========================= */
 
 .numero {
     position: absolute;
 
-    top: 15px;
-    right: 18px;
+    top: 14px;
+    right: 17px;
 
     color: #831a91;
 
+    font-size: 14px;
     font-weight: bold;
 }
 
 
-/* ÍCONE */
+/* =========================
+   IMAGEM
+   ========================= */
 
-.icone {
-    font-size: 55px;
-    margin-bottom: 15px;
+.imagem-card {
+    width: 145px;
+    height: 105px;
+
+    object-fit: cover;
+
+    border-radius: 12px;
+
+    margin-bottom: 16px;
+
+    box-shadow:
+        0 4px 10px rgba(0, 0, 0, 0.18);
 }
 
 
-/* FRENTE */
+/* =========================
+   FRENTE
+   ========================= */
 
 .cartao-frente h3 {
     color: #831a91;
 
     font-size: 18px;
 
-    margin-bottom: 12px;
+    margin-bottom: 10px;
 }
 
 .cartao-frente p {
     color: #333;
 
-    font-size: 16px;
+    font-size: 15px;
 
     line-height: 1.4;
 }
 
 
-/* VERSO */
+/* =========================
+   DICA
+   ========================= */
+
+.dica {
+    margin-top: 18px;
+
+    color: #999;
+
+    font-size: 12px;
+}
+
+
+/* =========================
+   VERSO
+   ========================= */
 
 .cartao-verso {
     transform: rotateY(180deg);
@@ -192,25 +283,28 @@ main {
     background: #ffffff;
 }
 
-.cartao-verso .icone {
-    font-size: 45px;
+.cartao-verso .imagem-card {
+    width: 120px;
+    height: 85px;
 }
 
 .cartao-verso p {
     color: #333;
 
-    font-size: 15px;
+    font-size: 14px;
 
     line-height: 1.5;
 
-    margin-top: 15px;
+    margin-top: 12px;
 }
 
 
-/* RESPOSTA */
+/* =========================
+   RESPOSTAS
+   ========================= */
 
 .resposta {
-    font-size: 19px;
+    font-size: 18px;
 
     font-weight: bold;
 }
@@ -224,14 +318,61 @@ main {
 }
 
 
-/* RODAPÉ */
+/* =========================
+   RODAPÉ
+   ========================= */
 
 footer {
+    width: 100%;
+
+    padding: 18px;
+
     background: #457fae;
 
     color: white;
 
     text-align: center;
 
-    padding: 18px;
+    font-size: 14px;
+}
+
+footer strong {
+    font-weight: bold;
+}
+
+
+/* =========================
+   CELULAR
+   ========================= */
+
+@media (max-width: 600px) {
+
+    .cabecalho {
+        padding: 16px 20px;
+    }
+
+    .cabecalho h1 {
+        font-size: 22px;
+    }
+
+    main {
+        padding: 35px 15px;
+    }
+
+    .titulo h2 {
+        font-size: 25px;
+    }
+
+    .titulo p {
+        font-size: 15px;
+    }
+
+    .cards {
+        gap: 25px;
+    }
+
+    .cartao {
+        width: 270px;
+        height: 340px;
+    }
 }
