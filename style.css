@@ -22,12 +22,12 @@ body {
 }
 
 h1 {
-    color: #ffffff;
+    color: white;
     font-size: 24px;
 }
 
 .cabecalho-link {
-    color: #ffffff;
+    color: white;
     text-decoration: none;
     font-weight: bold;
 }
@@ -56,7 +56,7 @@ main {
     color: #555;
 }
 
-/* ÁREA DOS CARDS */
+/* CARDS */
 .cards {
     display: flex;
     justify-content: center;
@@ -65,7 +65,6 @@ main {
     flex-wrap: wrap;
 }
 
-/* CARD */
 .cartao {
     width: 260px;
     height: 320px;
@@ -80,7 +79,6 @@ main {
     transform-style: preserve-3d;
 }
 
-/* FAZ O CARD VIRAR */
 .cartao:hover .cartao-interno {
     transform: rotateY(180deg);
 }
@@ -100,11 +98,24 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
     padding: 20px;
     text-align: center;
 }
 
-/* IMAGEM */
+.cartao-frente h3 {
+    color: #831a91;
+    margin-bottom: 10px;
+}
+
+.cartao-frente p,
+.cartao-verso p {
+    color: #333;
+    font-size: 16px;
+    line-height: 1.4;
+}
+
+/* IMAGENS */
 .cartao-imagem {
     width: 140px;
     height: 130px;
@@ -113,17 +124,7 @@ main {
     margin-bottom: 15px;
 }
 
-/* FRENTE */
-.cartao-frente h3 {
-    color: #831a91;
-    margin-bottom: 10px;
-}
-
-.cartao-frente p {
-    color: #333;
-    font-size: 16px;
-}
-
+/* NÚMERO */
 .numero {
     position: absolute;
     top: 10px;
@@ -137,17 +138,11 @@ main {
     transform: rotateY(180deg);
 }
 
-.cartao-verso p {
-    color: #333;
-    font-size: 16px;
-    line-height: 1.4;
-}
-
 .resposta {
     font-size: 20px;
     font-weight: bold;
-    color: #831a91;
     margin-bottom: 15px;
+    color: #831a91;
 }
 
 /* RODAPÉ */
